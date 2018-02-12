@@ -3,9 +3,7 @@
 .globl _start
 _start:
 lea CString_cfstring(%rip), %rsi
-xor %rdi, %rdi
-mov $0x2000001, %rax
-syscall # exit(0)
+retq
 
 .section __TEXT,__cstring
 CString: .asciz	 "what am i doing with my life plz help me"  
